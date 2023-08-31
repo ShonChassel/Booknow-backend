@@ -17,6 +17,7 @@ const UserSchema = new mongoose.Schema({
     },
     img: {
         type: String,
+         required: false,
     },
     city: {
         type: String,
