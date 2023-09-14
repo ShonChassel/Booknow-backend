@@ -38,6 +38,7 @@ export const login = async (req, res, next) => {
     res
       .cookie("access_token", token, {
         httpOnly: true,
+        secure: process.env.NODE_ENV === "production" ? true : false,
       })
       .status(200)
       .json({ details: { ...otherDetails }, isAdmin });
