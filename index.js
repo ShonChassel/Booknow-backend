@@ -30,8 +30,14 @@ mongoose.connection.on('connected', ()=>{
     console.log('mongoDB connected');
 })
 
+const corsOptions ={
+    origin:'http://localhost:3000', 
+    credentials:true,        
+    optionSuccessStatus:200
+}
+
 //? middlewares 
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(cookieParser())
 app.use(express.json())
 
