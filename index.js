@@ -30,14 +30,14 @@ mongoose.connection.on('connected', ()=>{
     console.log('mongoDB connected');
 })
 
-const corsOptions ={
-    origin:'https://booknow-com-bw6y.onrender.com',  
-    credentials:true,        
-    optionSuccessStatus:200
-}
+// const corsOptions ={
+//     origin:'https://booknow-com-bw6y.onrender.com',  
+//     credentials:true,        
+//     optionSuccessStatus:200
+// }
 
 //? middlewares 
-app.use(cors(corsOptions))
+app.use(cors())
 app.use(cookieParser())
 app.use(express.json())
 
