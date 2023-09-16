@@ -31,7 +31,7 @@ mongoose.connection.on('connected', ()=>{
 })
 
 const corsOptions ={
-    origin:'http://localhost:3000'||'https://booknow-com-bw6y.onrender.com/',  
+    origin:'https://booknow-com-bw6y.onrender.com/',  
     credentials:true,        
     optionSuccessStatus:200
 }
